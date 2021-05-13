@@ -1,0 +1,3 @@
+docker run -d -it --name ub ubuntu
+docker exec -it ub sh -c 'apt update -y; apt install curl -y;'
+docker exec -it ub sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
