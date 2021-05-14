@@ -1,0 +1,2 @@
+docker run -p 8000:8080 devopsdockeruh/simple-web-service server
+firefox localhost:8000
