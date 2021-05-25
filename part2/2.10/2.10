@@ -1,1 +1,3 @@
 Copied my latests version (exercise 1.9) and made backend's REQUEST_ORGIN point to the new frontend address, localhost.
+
+Dockerfiles for back- and frontend can be found in similarly named folders.
