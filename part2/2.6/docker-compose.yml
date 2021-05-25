@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    build: ./frontend
+    ports:
+      - 5000:5000
+
+  backend:
+    image: backend
+    build: ./backend
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - POSTGRES_HOST=postgres
+      - REDIS_HOST=redis
+
+  postgres:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    restart: unless-stopped
