@@ -1,0 +1,5 @@
+Project inside image folder.
+Build script /image/script.sh requires login to use.
+Build is done by first building the Dockerfile, docker build -t double .
+and then executed with docker run -it -v /var/run/docker.sock:/var/run/docker.sock double
+Passing the docker sock is required.
